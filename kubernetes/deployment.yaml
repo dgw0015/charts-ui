@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: charts-ui
+  namespace: demo
+spec:
+  selector:
+    matchLabels:
+      app: charts-ui
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: charts-ui
+    spec:
+      containers:
+        - name: charts-ui
+          image: 'charts-ui:1.0.0'
+          resources:
+            limits:
+              cpu: "400m"
+              memory: "500Mi"
+            requests:
+              cpu: "250m"
+              memory: "300Mi"

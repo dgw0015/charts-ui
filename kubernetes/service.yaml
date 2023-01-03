@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: charts-ui
+  namespace: demo
+  labels:
+    app: charts-ui
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: web
+  selector:
+    app: charts-ui

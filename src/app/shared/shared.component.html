@@ -1,0 +1,36 @@
+<div class="flex-fill" style="margin-top: 10px;">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="horizontal">
+    <li ngbNavItem="home">
+      <button>
+        <a ngbNavLink [routerLink]="['demo-home']">Home</a>
+      </button>
+    </li>
+    <li ngbNavItem="lineChart">
+      <button>
+        <a ngbNavLink [routerLink]="['line-chart']">Expenses - Line Chart</a>
+      </button>
+    </li>
+    <li ngbNavItem="polarAreaChart">
+      <button>
+        <a ngbNavLink [routerLink]="['polar-area-chart']">Categorized - Polar Area Chart</a>
+      </button>
+    </li>
+    <li ngbNavItem="radarChart">
+      <button>
+        <a ngbNavLink [routerLink]="['radar-chart']">Radar Chart</a>
+      </button>
+    </li>
+    <li ngbNavItem="scatterChart">
+      <button>
+        <a ngbNavLink [routerLink]="['scatter-chart']">Scatter Chart</a>
+      </button>
+    </li>
+    <li ngbNavItem="doughnutChart">
+      <button>
+        <a ngbNavLink [routerLink]="['doughnut-chart']">Doughnut Chart</a>
+      </button>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ms-4"></div>
+</div>
